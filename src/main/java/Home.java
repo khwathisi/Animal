@@ -1,57 +1,62 @@
-import javax.naming.Name;
 import java.util.ArrayList;
 
 public class Home {
-    String pets[];
-    private String[] homePets;
+    ArrayList Pets = new ArrayList();
     Dog dog = new Dog();
     Cat cat = new Cat();
 
-    private String Type;
-    private String Name;
-
-    public Home(String Name, String Type){
-        this.Name = Name;
-        this.Type = Type;
-        this.pets = pets;
+    public Home() {
+        super();
     }
 
     public String adopt(String type){
         String error = "Error";
 
-        if(Type == dog.getType())
+        if(type.equals(dog.getType()))
         {
-            String animalAdopt = "The " + Type + " is adopted";
-            pets=new String[]{type};
-            return animalAdopt;
+            if(Pets.contains(dog.getType()))
+            {
+                System.out.println("You already have a dog");
+            }else
+                {
+                    String animalAdopt = "The " + type + " is adopted";
+                    Pets.add(type);
+                    System.out.println(animalAdopt);
+                }
 
-        }else if(Type == cat.getType())
+        }else if(type.equals(cat.getType()))
         {
-            String animalAdopt = "The " + Type + " is adopted";
-            pets= new String[]{type};
-            return animalAdopt;
+            if(Pets.contains(cat.getType()))
+            {
+                System.out.println("You already have a cat");
+            }else
+                {
+                    String animalAdopt = "The " + type + " is adopted";
+                    Pets.add(type);
+                    System.out.println(animalAdopt);
+                }
+
         }else {
             System.out.println(error);
         }
 
-
-        return /*makeAllSounds()*/ "done";
+        return error;
     }
 
     public String makeAllSounds(){
-        int len = pets.length;
-        for(int i=0; i< len; i++){
-            if (pets[i] == dog.getType())
+        int lens = Pets.size();
+        for(int i=0; i< lens; i++){
+            if (Pets.get(i) == dog.getType())
             {
                 System.out.println(dog.getName() + " barks");
-            }else if(pets[i] == cat.getType())
+            }else if(Pets.get(i) == cat.getType())
             {
                 System.out.println(cat.getName() + " meows");
             }else {
-                System.out.println("Error");
+                System.out.println("No pets, it's lonely");
             }
         }
-        return "No pets, it's lonely";
+        return "Error";
     }
 
 

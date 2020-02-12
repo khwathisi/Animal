@@ -7,7 +7,11 @@ public class Animal {
         this.Type = Type;
     }
 
-    public String Sound(){
+    public Animal() {
+
+    }
+
+    public String Sound(String Type, String Name){
 
         String animalError = "No animal input";
         if(Type == "Dog")
@@ -22,16 +26,16 @@ public class Animal {
         return animalError;
     }
 
-    public String Eat(){
+    public String Eat(String Type, String Name){
         String animalError = "No animal input";
         if(Type == "Dog")
         {
             String animalEat = "The " + Type + " " + Name + " eats";
-            return animalEat;
+            System.out.println(animalEat);
         }else if(Type == "Cat")
         {
             String animalEat = "The " + Type + " " + Name + " eats";
-            return animalEat;
+            System.out.println(animalEat);
         }
         return animalError;
     }
