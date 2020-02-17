@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AnimalTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-02-12T07:32:15" hostname="recruit-ThinkCentre-M73" time="0.003">
+<testsuite name="AnimalTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-02-17T08:13:46" hostname="recruit-ThinkCentre-M73" time="0.008">
   <properties/>
-  <testcase name="adoptCat" classname="AnimalTest" time="0.001"/>
-  <testcase name="adoptDog" classname="AnimalTest" time="0.0"/>
+  <testcase name="adoptCat" classname="AnimalTest" time="0.004"/>
+  <testcase name="adoptDog" classname="AnimalTest" time="0.001"/>
+  <testcase name="allSounds" classname="AnimalTest" time="0.001"/>
   <testcase name="catSound" classname="AnimalTest" time="0.0"/>
   <testcase name="dogSound" classname="AnimalTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
+  <system-out><![CDATA[The Cat is adopted
+The Dog is adopted
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

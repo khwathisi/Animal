@@ -22,6 +22,7 @@ public class Home {
                     String animalAdopt = "The " + type + " is adopted";
                     Pets.add(type);
                     System.out.println(animalAdopt);
+                    return animalAdopt;
                 }
 
         }else if(type.equals(cat.getType()))
@@ -34,6 +35,7 @@ public class Home {
                     String animalAdopt = "The " + type + " is adopted";
                     Pets.add(type);
                     System.out.println(animalAdopt);
+                    return animalAdopt;
                 }
 
         }else {
@@ -49,14 +51,16 @@ public class Home {
             if (Pets.get(i) == dog.getType())
             {
                 System.out.println(dog.getName() + " barks");
+                return dog.getName() + " barks";
             }else if(Pets.get(i) == cat.getType())
             {
                 System.out.println(cat.getName() + " meows");
+                return cat.getName() + " meows";
             }else {
                 System.out.println("No pets, it's lonely");
             }
         }
-        return "Error";
+        return "No pets, it's lonely";
     }
 
 
