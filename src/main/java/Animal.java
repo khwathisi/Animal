@@ -1,15 +1,4 @@
 public class Animal {
-    private String Name;
-    private String Type;
-
-    public Animal(String Name, String Type){
-        this.Name = Name;
-        this.Type = Type;
-    }
-
-    public Animal() {
-
-    }
 
     public String Sound(String Type, String Name){
 

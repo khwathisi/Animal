@@ -8,12 +8,6 @@ public class Cat extends Animal{
         return super.Sound(getType(), getName());
     }
 
-    /*@Override
-    public String Eat(String Type, String Name) {
-        System.out.println(super.Eat(getType(), getName()));
-        return super.Eat(getType(), getName());
-    }*/
-
     public String getType(){
         return Type;
     }
